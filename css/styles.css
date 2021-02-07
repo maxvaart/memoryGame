@@ -1,0 +1,87 @@
+body{
+    display: flex;
+}
+.card-front img{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.card-back img{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 150;
+}
+.card-box {
+    margin: 40px ;
+    width: 200px;
+    height: 200px;
+    position: relative;
+
+  }
+
+.error  {
+    transform: rotateY(-180deg);
+}
+
+.girada , .logrado  {
+      transform: rotateY(180deg);
+}
+  
+.card {
+    transform-style: preserve-3d;
+    transition: all 0.5s linear;
+    width: 200px;
+    height: 200px;
+}
+  
+.card-front {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+  
+.card-back {
+    width: 200px;
+    height: 200px;
+}
+
+ #table{
+    margin: auto;
+    padding: 45px 100px;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .card-box {
+        margin: 15px ;
+        width: 100px;
+        height: 100px;
+      }
+      
+    .card {
+        width: 100px;
+        height: 100px;
+    }
+      
+    .card-front {
+        width: 100px;
+        height: 100px;
+    }
+      
+    .card-back {
+        width: 100px;
+        height: 100px;
+    }
+    
+     #table{
+        padding: 20px 40px;
+    }
+}
