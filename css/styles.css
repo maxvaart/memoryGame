@@ -1,6 +1,3 @@
-body{
-    display: flex;
-}
 .card-front img{
     border-radius: 10px;
     width: 100%;
@@ -15,10 +12,10 @@ body{
     object-fit: cover;
     z-index: 150;
 }
-.card-box {
-    margin: 40px ;
-    width: 200px;
-    height: 200px;
+.card-box , .card-box-init {
+    margin: 30px ;
+    width: 150px;
+    height: 150px;
     position: relative;
 
   }
@@ -31,33 +28,106 @@ body{
       transform: rotateY(180deg);
 }
   
-.card {
+.card  , .card-init{
     transform-style: preserve-3d;
     transition: all 0.5s linear;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 }
-  
+.card-init{
+    transform-style: preserve-3d;
+    transition: all 1s linear;
+    width: 150px;
+    height: 150px;
+} 
 .card-front {
     transform: rotateY(180deg);
     backface-visibility: hidden;
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 }
   
 .card-back {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 }
 
  #table{
     margin: auto;
-    padding: 45px 100px;
+    padding: 4% 10%;
     display:flex;
     flex-wrap: wrap;
+    z-index: 1;
 }
 
+.oculto{
+    display: none;
+}
+
+#blackScreen{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    margin: -10px;
+    opacity: 0.5;
+    z-index: 50;
+}
+
+#menuBox{
+    border-radius: 10px;
+    position: absolute;
+    text-align: center;
+    margin: 15% 40%;
+    z-index: 100;
+   
+}
+#nav , nav{
+    position:fixed;
+    height: 70px;
+    background-color: blue;
+    text-align: center;
+    z-index: 150;
+}
+nav{
+    width: 90%;
+    margin: -15px 3% 0px  4%;
+    border-radius: 7px;
+}
+#nav{
+    background-color: black;
+    color: white;
+    margin-left: 36%;
+    border-radius: 15px;
+    width: 290px;
+    padding-top: 15px;
+}
+.giro360{
+    transform: rotateY(360deg);
+}
+#menu{
+    padding: 25px 70px;
+    border-radius: 10px;
+    position: absolute;
+    background: white;
+}
+#cardLeft { 
+    position:absolute;
+    right: 100px; 
+    top: 10px; 
+    z-index: 2;
+}
+
+#cardRight {
+    position: absolute;
+    left: 400px;
+    top: 10px;
+    z-index: 2;
+}
+#contador{
+    font-size: 50px;
+}
 @media only screen and (max-width: 800px) {
 
     .card-box {
@@ -82,6 +152,6 @@ body{
     }
     
      #table{
-        padding: 20px 40px;
+        padding: 2% 10%;
     }
 }
